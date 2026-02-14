@@ -70,14 +70,18 @@
 
     .photo {
         margin-top: 20px;
-        width: 100%;
-        height: 220px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
         display: none;
         animation: fadeIn 0.8s ease forwards;
     }
+
+    .photo img {
+        width: 100%;
+        max-height: 60vh;
+        object-fit: contain; /* Mantiene proporción sin recortar */
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
 
     @keyframes fadeIn {
         from { opacity: 0; transform: scale(0.9); }
@@ -94,7 +98,10 @@
         Sabía que dirías que sí 😍💘
     </div>
 
-    <div class="photo" id="photoDiv"></div>
+    <div class="photo" id="photoDiv">
+        <img id="loveImage" src="" alt="Nuestra foto">
+    </div>
+
 </div>
 
 <button id="yesBtn">Sí</button>
@@ -180,4 +187,5 @@
 
 </body>
 </html>
+
 
